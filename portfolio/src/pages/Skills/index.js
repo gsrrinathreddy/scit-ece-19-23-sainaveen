@@ -9,12 +9,30 @@ import Card7 from '../../components/card7';
 import Card8 from '../../components/card8';
 import Card9 from '../../components/card9';
 import Card10 from '../../components/card10';
-
-
+import {useState,useEffect} from 'react';
+import axios from 'axios';
+import { Typography } from '@mui/material';
 
 export default function Skills(){
+  const [loader,setLoader] = useState(true);
+    const [skills,setSkills] = useState(null);
+
+    const connectToServer = async  () => axios.get('http://localhost:7000/Skills')
+                                            .then(res=>{
+                                        
+                                                console.log(res.data);
+                                                setSkills(res.data);
+                                                setLoader(false)
+                                            }).catch(err=>console.log(err))
+useEffect(()=>{
+   connectToServer();
+},[])
+
+
+
   return(
     <>
+    <h1>Skills</h1>
       <Grid container sx={{ p: 3 }} spacing={4}>
       <Grid item xs={4}>
       <Card1/>
