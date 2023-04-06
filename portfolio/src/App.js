@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
@@ -7,10 +8,15 @@ import Qualification from './pages/Qualification';
 import Aboutme from './pages/Aboutme';
 import Projects from './pages/Projects';
 import HomePage from './pages/homePage';
+=======
+import logo from './logo.svg';
+import './App.css';
+>>>>>>> e03aba7b8b774822353569d58fad77667adec3ee
 
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <BrowserRouter>
       <Navbar />
       <Routes>
@@ -22,6 +28,22 @@ function App() {
       </Routes>
       </BrowserRouter>
       
+=======
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+>>>>>>> e03aba7b8b774822353569d58fad77667adec3ee
     </div>
   );
 }
